@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="es" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-jsons-billing/billing-fields" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">Campos de la factura electrónica | MATIAS API</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://lopezsoft.github.io/docs-matias-api.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://lopezsoft.github.io/docs-matias-api.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://lopezsoft.github.io/docs-matias-api.github.io/docs/jsons-billing/billing-fields"><meta data-rh="true" property="og:locale" content="es"><meta data-rh="true" name="docusaurus_locale" content="es"><meta data-rh="true" name="docsearch:language" content="es"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Campos de la factura electrónica | MATIAS API"><meta data-rh="true" name="description" content="En esta sección se describen los campos que se deben de considerar para la generación de la factura electrónica,"><meta data-rh="true" property="og:description" content="En esta sección se describen los campos que se deben de considerar para la generación de la factura electrónica,"><link data-rh="true" rel="icon" href="/docs-matias-api.github.io/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://lopezsoft.github.io/docs-matias-api.github.io/docs/jsons-billing/billing-fields"><link data-rh="true" rel="alternate" href="https://lopezsoft.github.io/docs-matias-api.github.io/docs/jsons-billing/billing-fields" hreflang="es"><link data-rh="true" rel="alternate" href="https://lopezsoft.github.io/docs-matias-api.github.io/docs/jsons-billing/billing-fields" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/docs-matias-api.github.io/blog/rss.xml" title="MATIAS API RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/docs-matias-api.github.io/blog/atom.xml" title="MATIAS API Atom Feed"><link rel="stylesheet" href="/docs-matias-api.github.io/assets/css/styles.ed4ea79f.css">
+<script src="/docs-matias-api.github.io/assets/js/runtime~main.e77f233f.js" defer="defer"></script>
+<script src="/docs-matias-api.github.io/assets/js/main.5d9d764f.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Saltar al contenido principal"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Saltar al contenido principal</a></div><nav aria-label="Principal" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Alternar barra lateral" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs-matias-api.github.io/"><div class="navbar__logo"><img src="/docs-matias-api.github.io/img/logo.png" alt="MATIAS API Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs-matias-api.github.io/img/logo.png" alt="MATIAS API Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Inicio</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs-matias-api.github.io/docs/intro">Integración</a></div><div class="navbar__items navbar__items--right"><a href="https://www.facebook.com/MatiasAppi" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Facebook<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Cambiar entre modo oscuro y claro (actualmente modo claro)" aria-label="Cambiar entre modo oscuro y claro (actualmente modo claro)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Volver al principio" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs barra lateral" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-matias-api.github.io/docs/intro">Introducción</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/docs-matias-api.github.io/docs/category/jsons-facturación">JSONs Facturación</a><button aria-label="Collapse sidebar category &#x27;JSONs Facturación&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/billing-fields">Campos de la factura electrónica</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/invoice">JSON de una Factura</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/invoice-with-retentions-example">JSON de Factura con Retenciones</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/credit-invoice">JSON Factura a crédito</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/invoice-with-charges">JSON de una Factura con Cargos</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/EURO-invoice">JSON de una Factura en Euros</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/USD-invoice">JSON de una Factura en USD</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/AIU-invoice">JSON de una Factura AIU</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/credit-note">JSON de una Nota Crédito</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-matias-api.github.io/docs/jsons-billing/debit-note">JSON de una Nota Débito</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Página de Inicio" class="breadcrumbs__link" href="/docs-matias-api.github.io/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs-matias-api.github.io/docs/category/jsons-facturación"><span itemprop="name">JSONs Facturación</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Campos de la factura electrónica</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">En esta página</button></div><div class="theme-doc-markdown markdown"><h1>Campos de la factura electrónica</h1>
+<p>En esta sección se describen los campos que se deben de considerar para la generación de la factura electrónica,
+nota de crédito y nota de débito, documento soporte y documento equivalente, con sus respectivas notas de ajuste.</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;resolution_number&quot;: &quot;18760000001&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;date&quot;: &quot;2021-09-12&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;expiration_date&quot;: &quot;2021-09-12&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;time&quot;: &quot;2021-09-12 22:46:53&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;notes&quot;: &quot;Nota del documento&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;document_number&quot;: 990000001,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;operation_type_id&quot;: 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;type_document_id&quot;: 7,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;graphic_representation&quot;: 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;send_email&quot;: 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;currency_id&quot;: 272,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;payments&quot;: [</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;payment_method_id&quot;: 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;means_payment_id&quot;: 10,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;value_paid&quot;: &quot;141100.00&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;payment_due_date&quot;: &quot;2024-02-22&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;payment_exchange_rate&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;exchange_rate&quot;: &quot;3950.00&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;rate_date&quot;: &quot;2022-06-28&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;point_of_sale&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;cashier_name&quot;: &quot;LEWIS LOPEZ&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;terminal_number&quot;: &quot;CJ001aB&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;cashier_type&quot;: &quot;Caja de apoyo&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;sales_code&quot;: &quot;POS01&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;address&quot;: &quot;Gilbarco Encore 4 L1 Mangue ra 17 AC&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;sub_total&quot;: &quot;2000.10&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;software_manufacturer&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;owner_name&quot;: &quot;LEWIS LOPEZ GOMEZ&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;company_name&quot;: &quot;LOPEZSOFT SAS&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;software_name&quot;: &quot;SOFTWARE POS MATIAS APP&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;order_reference&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;reference_number&quot;: &quot;4545478787&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;reference_date&quot;: &quot;2021-05-19&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;customer&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;country_id&quot;: &quot;170&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;city_id&quot;: &quot;149&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;identity_document_id&quot;: &quot;1&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;type_organization_id&quot;: 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;tax_regime_id&quot;: 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;tax_level_id&quot;: 5,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;company_name&quot;: &quot;Santiago Arango&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;dni&quot;: &quot;1152440359&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;mobile&quot;: &quot;3108435423&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;email&quot;: &quot;lws_1234@hotmail.com&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;address&quot;: &quot;Direccion residencial&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;postal_code&quot;: &quot;661002&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;points&quot;: 0</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;discrepancy_response&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;reference_id&quot;: &quot;EPOS2&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;response_id&quot;: &quot;9&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;billing_reference&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;number&quot;: &quot;EPOS2&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;date&quot;: &quot;2023-12-22&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;uuid&quot;: &quot;b1b5d93a2918407a2ef0048ed3092e5d96c94f73db178779463f202f8c52dd53ef5b9888d804d4b609521b1d031aea39&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;allowance_charges&quot;: [</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;amount&quot;: &quot;10000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;base_amount&quot;: &quot;725000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;charge_indicator&quot;: true,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;allowance_charge_reason&quot;: &quot;Motivo del cargo a la factura&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;amount&quot;: &quot;10000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;base_amount&quot;: &quot;725000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;charge_indicator&quot;: false,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;discount_id&quot;: 8,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;allowance_charge_reason&quot;: &quot;Motivo del descuento a la factura&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;legal_monetary_totals&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;line_extension_amount&quot;: &quot;131600.00&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;tax_exclusive_amount&quot;: &quot;50000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;tax_inclusive_amount&quot;: &quot;141100.00&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;total_charges&quot;: 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;total_allowance&quot;: 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;payable_amount&quot;: &quot;141100.00&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;lines&quot;: [</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;invoiced_quantity&quot;: &quot;3&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;unit_measure_id&quot;: &quot;1093&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;line_extension_amount&quot;: &quot;81600&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;free_of_charge_indicator&quot;: false,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;description&quot;: &quot;Hunters Mini Tumaco 82%&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;note&quot;: &quot;Información adicional del producto, es opcional cuando no es AUI&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;code&quot;: &quot;HMT82&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;type_item_identifications_id&quot;: &quot;4&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;reference_price_id&quot;: &quot;1&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;price_amount&quot;: &quot;27200&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;base_quantity&quot;: &quot;3&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;invoice_period&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        &quot;start_date&quot;: &quot;2022-08-30&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        &quot;description_code&quot;: 1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;allowance_charges&quot;: [</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;amount&quot;: &quot;10000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;base_amount&quot;: &quot;725000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;charge_indicator&quot;: true,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;allowance_charge_reason&quot;: &quot;Motivo del cargo a la linea&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;amount&quot;: &quot;10000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;base_amount&quot;: &quot;725000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;charge_indicator&quot;: false,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;discount_id&quot;: 8,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;allowance_charge_reason&quot;: &quot;Motivo del descuento a la linea&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      ]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;invoiced_quantity&quot;: &quot;1&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;unit_measure_id&quot;: &quot;1093&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;line_extension_amount&quot;: &quot;50000&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;free_of_charge_indicator&quot;: false,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;description&quot;: &quot;TIJERA NECROPSIA AVES&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;code&quot;: &quot;HMT83&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;type_item_identifications_id&quot;: &quot;4&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;reference_price_id&quot;: &quot;1&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;price_amount&quot;: &quot;59500&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;base_quantity&quot;: &quot;1&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;tax_totals&quot;: [</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;tax_id&quot;: &quot;1&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;tax_amount&quot;: 9500,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;taxable_amount&quot;: 50000,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;percent&quot;: 19</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      ]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;tax_totals&quot;: [</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;tax_id&quot;: &quot;1&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;tax_amount&quot;: 9500,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;taxable_amount&quot;: 50000,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;percent&quot;: 19</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copiar código al portapapeles" title="Copiar" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="descripción-de-los-campos">Descripción de los campos<a href="#descripción-de-los-campos" class="hash-link" aria-label="Enlace directo al Descripción de los campos" title="Enlace directo al Descripción de los campos">​</a></h2>
+<p>A continuación se describen los campos que se deben de considerar para la generación de la factura electrónica.</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;resolution_number&quot;: str,  # Número de resolución del documento</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;date&quot;: str,  # Fecha de emisión del documento</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;expiration_date&quot;: str,  # Fecha de expiración del documento</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;time&quot;: str,  # Hora de emisión del documento</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;notes&quot;: str,  # Notas adicionales del documento</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;document_number&quot;: int,  # Número del documento</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;operation_type_id&quot;: int,  # ID del tipo de operación</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;type_document_id&quot;: int,  # ID del tipo de documento</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;graphic_representation&quot;: int,  # Indicador de representación gráfica</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;send_email&quot;: int,  # Indicador de envío de email</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;currency_id&quot;: int,  # ID de la moneda utilizada</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;payments&quot;: [  # Lista de pagos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;payment_method_id&quot;: int,  # ID del método de pago</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;means_payment_id&quot;: int,  # ID del medio de pago</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;value_paid&quot;: str,  # Valor pagado</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;payment_due_date&quot;: str,  # Fecha de vencimiento del pago</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;payment_exchange_rate&quot;: {  # Tasa de cambio para el pago</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;exchange_rate&quot;: str,  # Valor de la tasa de cambio</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;rate_date&quot;: str,  # Fecha de la tasa de cambio</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;point_of_sale&quot;: {  # Información del punto de venta</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;cashier_name&quot;: str,  # Nombre del cajero</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;terminal_number&quot;: str,  # Número de terminal</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;cashier_type&quot;: str,  # Tipo de cajero</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;sales_code&quot;: str,  # Código de ventas</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;address&quot;: str,  # Dirección</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;sub_total&quot;: str,  # Subtotal</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;software_manufacturer&quot;: {  # Información del fabricante del software</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;owner_name&quot;: str,  # Nombre del propietario</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;company_name&quot;: str,  # Nombre de la compañía</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;software_name&quot;: str,  # Nombre del software</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;order_reference&quot;: {  # Referencia de la orden</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;reference_number&quot;: str,  # Número de referencia</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;reference_date&quot;: str,  # Fecha de referencia</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;customer&quot;: {  # Información del cliente</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;country_id&quot;: str,  # ID del país</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;city_id&quot;: str,  # ID de la ciudad</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;identity_document_id&quot;: str,  # ID del documento de identidad</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;type_organization_id&quot;: int,  # ID del tipo de organización</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;tax_regime_id&quot;: int,  # ID del régimen tributario</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;tax_level_id&quot;: int,  # ID del nivel tributario</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;company_name&quot;: str,  # Nombre de la compañía</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;dni&quot;: str,  # DNI del cliente</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;mobile&quot;: str,  # Móvil del cliente</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;email&quot;: str,  # Email del cliente</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;address&quot;: str,  # Dirección del cliente</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;postal_code&quot;: str,  # Código postal del cliente,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;points&quot;: int,  # Puntos del cliente</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;discrepancy_response&quot;: {  # Respuesta a discrepancias</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;reference_id&quot;: str,  # ID de referencia</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;response_id&quot;: str,  # ID de respuesta</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;billing_reference&quot;: {  # Referencia de facturación</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;number&quot;: str,  # Número</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;date&quot;: str,  # Fecha</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;uuid&quot;: str,  # UUID</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;allowance_charges&quot;: [  # Cargos y descuentos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;amount&quot;: str,  # Monto</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;base_amount&quot;: str,  # Monto base</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;charge_indicator&quot;: bool,  # Indicador de cargo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;allowance_charge_reason&quot;: str,  # Motivo del cargo o descuento</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;discount_id&quot;: int,  # ID del descuento (opcional)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;legal_monetary_totals&quot;: {  # Totales monetarios legales</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;line_extension_amount&quot;: str,  # Monto de extensión de línea</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;tax_exclusive_amount&quot;: str,  # Monto exclusivo de impuestos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;tax_inclusive_amount&quot;: str,  # Monto incluyente de impuestos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;total_charges&quot;: int,  # Total de cargos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;total_allowance&quot;: int,  # Total de descuentos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  &quot;payable_amount&quot;: str,  # Monto pagable</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;lines&quot;: [  # Líneas de detalle</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;invoiced_quantity&quot;: str,  # Cantidad facturada</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;unit_measure_id&quot;: str,  # ID de unidad de medida</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;line_extension_amount&quot;: str,  # Monto de extensión de línea</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;free_of_charge_indicator&quot;: bool,  # Indicador de gratuidad</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;description&quot;: str,  # Descripción</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;note&quot;: str,  # Nota</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;code&quot;: str,  # Código</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;type_item_identifications_id&quot;: str,  # ID de tipo de identificación del ítem</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;reference_price_id&quot;: str,  # ID de precio de referencia</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;price_amount&quot;: str,  # Monto del precio</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;base_quantity&quot;: str,  # Cantidad base</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        &quot;invoice_period&quot;: {  # Periodo de facturación de la línea del documento soporte</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;start_date&quot;: str,  # Fecha de inicio</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          &quot;description_code&quot;: int,  # Código de descripción</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;allowance_charges&quot;: [  # Cargos y descuentos en la línea</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		  {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">			&quot;amount&quot;: str,  # Monto</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">			&quot;base_amount&quot;: str,  # Monto base</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">			&quot;charge_indicator&quot;: bool,  # Indicador de cargo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">			&quot;allowance_charge_reason&quot;: str,  # Motivo del cargo o descuento</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">			&quot;discount_id&quot;: int,  # ID del descuento (opcional)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;tax_totals&quot;: [  # Totales de impuestos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		  {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">			&quot;tax_id&quot;: str,  # ID del impuesto</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">			&quot;tax_amount&quot;: int,  # Monto del impuesto</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">			&quot;taxable_amount&quot;: int,  # Monto imponible</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">			&quot;percent&quot;: int,  # Porcentaje</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	&quot;tax_totals&quot;: [  # Totales de impuestos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;tax_id&quot;: str,  # ID del impuesto</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;tax_amount&quot;: int,  # Monto del impuesto</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;taxable_amount&quot;: int,  # Monto imponible</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">		&quot;percent&quot;: int,  # Porcentaje</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">	]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copiar código al portapapeles" title="Copiar" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="uso-de-los-campos">Uso de los campos<a href="#uso-de-los-campos" class="hash-link" aria-label="Enlace directo al Uso de los campos" title="Enlace directo al Uso de los campos">​</a></h2>
+<p>A continuación se describe el uso de los campos de la factura electrónica, nota de crédito y nota de débito,
+documento soporte y documento equivalente, con sus respectivas notas de ajuste.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="resolution_number">resolution_number<a href="#resolution_number" class="hash-link" aria-label="Enlace directo al resolution_number" title="Enlace directo al resolution_number">​</a></h3>
+<p>Número de resolución del documento. Este campo es obligatorio para todos los documentos y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="date">date<a href="#date" class="hash-link" aria-label="Enlace directo al date" title="Enlace directo al date">​</a></h3>
+<p>Fecha de emisión del documento. Este campo es obligatorio para todos los documentos y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="expiration_date">expiration_date<a href="#expiration_date" class="hash-link" aria-label="Enlace directo al expiration_date" title="Enlace directo al expiration_date">​</a></h3>
+<p>Fecha de expiración del documento. Este campo es obligatorio solo para el <strong>documento equivalente P.O.S.</strong> y debe ser un string.
+Para los demás documentos no es requerido.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="time">time<a href="#time" class="hash-link" aria-label="Enlace directo al time" title="Enlace directo al time">​</a></h3>
+<p>Hora de emisión del documento. Este campo es obligatorio para todos los documentos y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notes">notes<a href="#notes" class="hash-link" aria-label="Enlace directo al notes" title="Enlace directo al notes">​</a></h3>
+<p>Notas adicionales del documento. Este campo es opcional para algunos documentos y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="document_number">document_number<a href="#document_number" class="hash-link" aria-label="Enlace directo al document_number" title="Enlace directo al document_number">​</a></h3>
+<p>Número del documento. Este campo es obligatorio para todos los documentos y debe ser un entero encerrado entre <code>&quot;&quot;</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="operation_type_id">operation_type_id<a href="#operation_type_id" class="hash-link" aria-label="Enlace directo al operation_type_id" title="Enlace directo al operation_type_id">​</a></h3>
+<p>ID del tipo de operación. Este campo es obligatorio para todos los documentos y debe ser un entero.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="type_document_id">type_document_id<a href="#type_document_id" class="hash-link" aria-label="Enlace directo al type_document_id" title="Enlace directo al type_document_id">​</a></h3>
+<p>ID del tipo de documento. Este campo es obligatorio para todos los documentos y debe ser un entero.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="graphic_representation">graphic_representation<a href="#graphic_representation" class="hash-link" aria-label="Enlace directo al graphic_representation" title="Enlace directo al graphic_representation">​</a></h3>
+<p>Indicador de representación gráfica. Este campo es opcional, se debe enviar cuado se espera que la API genere la representación gráfica.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="send_email">send_email<a href="#send_email" class="hash-link" aria-label="Enlace directo al send_email" title="Enlace directo al send_email">​</a></h3>
+<p>Indicador de envío de email. Este campo es opcional, se debe enviar cuado se espera que la API envíe el email.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="currency_id">currency_id<a href="#currency_id" class="hash-link" aria-label="Enlace directo al currency_id" title="Enlace directo al currency_id">​</a></h3>
+<p>ID de la moneda utilizada. Este campo es obligatorio para todos los documentos y debe ser un entero.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="payments">payments<a href="#payments" class="hash-link" aria-label="Enlace directo al payments" title="Enlace directo al payments">​</a></h3>
+<p>Lista de pagos. Este campo es obligatorio para todos los documentos y debe ser un arreglo de objetos.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="payment_method_id">payment_method_id<a href="#payment_method_id" class="hash-link" aria-label="Enlace directo al payment_method_id" title="Enlace directo al payment_method_id">​</a></h4>
+</li>
+</ul>
+<p>ID del método de pago. Este campo es obligatorio para todos los documentos y debe ser un entero.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="means_payment_id">means_payment_id<a href="#means_payment_id" class="hash-link" aria-label="Enlace directo al means_payment_id" title="Enlace directo al means_payment_id">​</a></h4>
+</li>
+</ul>
+<p>ID del medio de pago. Este campo es obligatorio para todos los documentos y debe ser un entero.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="value_paid">value_paid<a href="#value_paid" class="hash-link" aria-label="Enlace directo al value_paid" title="Enlace directo al value_paid">​</a></h4>
+</li>
+</ul>
+<p>Valor pagado. Este campo es obligatorio para todos los documentos y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="payment_due_date">payment_due_date<a href="#payment_due_date" class="hash-link" aria-label="Enlace directo al payment_due_date" title="Enlace directo al payment_due_date">​</a></h4>
+</li>
+</ul>
+<p>Fecha de vencimiento del pago. Este campo es obligatorio solo para los documentos a crédito y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="payment_exchange_rate">payment_exchange_rate<a href="#payment_exchange_rate" class="hash-link" aria-label="Enlace directo al payment_exchange_rate" title="Enlace directo al payment_exchange_rate">​</a></h3>
+<p>Tasa de cambio para el pago. Este campo es obligatorio solo para los documentos en moneda extranjera y debe ser un objeto.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="exchange_rate">exchange_rate<a href="#exchange_rate" class="hash-link" aria-label="Enlace directo al exchange_rate" title="Enlace directo al exchange_rate">​</a></h4>
+</li>
+</ul>
+<p>Valor de la tasa de cambio. Este campo es obligatorio solo para los documentos en moneda extranjera y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="rate_date">rate_date<a href="#rate_date" class="hash-link" aria-label="Enlace directo al rate_date" title="Enlace directo al rate_date">​</a></h4>
+</li>
+</ul>
+<p>Fecha de la tasa de cambio. Este campo es obligatorio solo para los documentos en moneda extranjera y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="point_of_sale">point_of_sale<a href="#point_of_sale" class="hash-link" aria-label="Enlace directo al point_of_sale" title="Enlace directo al point_of_sale">​</a></h3>
+<p>Información del punto de venta. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un objeto.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cashier_name">cashier_name<a href="#cashier_name" class="hash-link" aria-label="Enlace directo al cashier_name" title="Enlace directo al cashier_name">​</a></h4>
+</li>
+</ul>
+<p>Nombre del cajero. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="terminal_number">terminal_number<a href="#terminal_number" class="hash-link" aria-label="Enlace directo al terminal_number" title="Enlace directo al terminal_number">​</a></h4>
+</li>
+</ul>
+<p>Número de terminal. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="cashier_type">cashier_type<a href="#cashier_type" class="hash-link" aria-label="Enlace directo al cashier_type" title="Enlace directo al cashier_type">​</a></h4>
+</li>
+</ul>
+<p>Tipo de cajero. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="sales_code">sales_code<a href="#sales_code" class="hash-link" aria-label="Enlace directo al sales_code" title="Enlace directo al sales_code">​</a></h4>
+</li>
+</ul>
+<p>Código de ventas. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="address">address<a href="#address" class="hash-link" aria-label="Enlace directo al address" title="Enlace directo al address">​</a></h4>
+</li>
+</ul>
+<p>Dirección. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="sub_total">sub_total<a href="#sub_total" class="hash-link" aria-label="Enlace directo al sub_total" title="Enlace directo al sub_total">​</a></h4>
+</li>
+</ul>
+<p>Subtotal. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="software_manufacturer">software_manufacturer<a href="#software_manufacturer" class="hash-link" aria-label="Enlace directo al software_manufacturer" title="Enlace directo al software_manufacturer">​</a></h3>
+<p>Información del fabricante del software. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un objeto.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="owner_name">owner_name<a href="#owner_name" class="hash-link" aria-label="Enlace directo al owner_name" title="Enlace directo al owner_name">​</a></h4>
+</li>
+</ul>
+<p>Nombre del propietario. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="company_name">company_name<a href="#company_name" class="hash-link" aria-label="Enlace directo al company_name" title="Enlace directo al company_name">​</a></h4>
+</li>
+</ul>
+<p>Nombre de la compañía. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="software_name">software_name<a href="#software_name" class="hash-link" aria-label="Enlace directo al software_name" title="Enlace directo al software_name">​</a></h4>
+</li>
+</ul>
+<p>Nombre del software. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="order_reference">order_reference<a href="#order_reference" class="hash-link" aria-label="Enlace directo al order_reference" title="Enlace directo al order_reference">​</a></h3>
+<p>Referencia de la orden. Este campo es opcional debe ser usado de acuerdo al giro del documento y debe ser un objeto.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="reference_number">reference_number<a href="#reference_number" class="hash-link" aria-label="Enlace directo al reference_number" title="Enlace directo al reference_number">​</a></h4>
+</li>
+</ul>
+<p>Número de referencia. Este campo es opcional debe ser usado de acuerdo al giro del documento y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="reference_date">reference_date<a href="#reference_date" class="hash-link" aria-label="Enlace directo al reference_date" title="Enlace directo al reference_date">​</a></h4>
+</li>
+</ul>
+<p>Fecha de referencia. Este campo es opcional debe ser usado de acuerdo al giro del documento y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="customer---factura">customer -&gt; Factura<a href="#customer---factura" class="hash-link" aria-label="Enlace directo al customer -&gt; Factura" title="Enlace directo al customer -&gt; Factura">​</a></h3>
+<p>Información del cliente. Este campo es obligatorio para todos los documentos relacionados con a factura electrónica y documento soporte y debe ser un objeto.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="country_id">country_id<a href="#country_id" class="hash-link" aria-label="Enlace directo al country_id" title="Enlace directo al country_id">​</a></h4>
+</li>
+</ul>
+<p>ID del país. Este campo es opcional, si no se envía por defecto toma el código del país de Colombia.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="city_id">city_id<a href="#city_id" class="hash-link" aria-label="Enlace directo al city_id" title="Enlace directo al city_id">​</a></h4>
+</li>
+</ul>
+<p>ID de la ciudad. Este campo es opcional, si no se envía por defecto toma el código de la ciudad de Bogotá.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="identity_document_id">identity_document_id<a href="#identity_document_id" class="hash-link" aria-label="Enlace directo al identity_document_id" title="Enlace directo al identity_document_id">​</a></h4>
+</li>
+</ul>
+<p>ID del documento de identidad. Este campo es opcional, si no se envía por defecto toma el código del documento de identidad NIT.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="type_organization_id">type_organization_id<a href="#type_organization_id" class="hash-link" aria-label="Enlace directo al type_organization_id" title="Enlace directo al type_organization_id">​</a></h4>
+</li>
+</ul>
+<p>ID del tipo de organización. Este campo es opcional, si no se envía por defecto toma el código del tipo de Persona Natural y asimiladas.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tax_regime_id">tax_regime_id<a href="#tax_regime_id" class="hash-link" aria-label="Enlace directo al tax_regime_id" title="Enlace directo al tax_regime_id">​</a></h4>
+</li>
+</ul>
+<p>ID del régimen tributario. Este campo es opcional, si no se envía por defecto toma el código(<code>49</code>) de No responsable de IVA.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tax_level_id">tax_level_id<a href="#tax_level_id" class="hash-link" aria-label="Enlace directo al tax_level_id" title="Enlace directo al tax_level_id">​</a></h4>
+</li>
+</ul>
+<p>ID del nivel tributario. Este campo es opcional, si no se envía por defecto toma el código(<code>R-99-PN</code>) de No aplica – Otros.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="company_name-1">company_name<a href="#company_name-1" class="hash-link" aria-label="Enlace directo al company_name" title="Enlace directo al company_name">​</a></h4>
+</li>
+</ul>
+<p>Nombre de la empresa/persona natual. Este campo es obligatorio para todos los documentos y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="dni">dni<a href="#dni" class="hash-link" aria-label="Enlace directo al dni" title="Enlace directo al dni">​</a></h4>
+</li>
+</ul>
+<p>DNI del cliente. Este campo es obligatorio para todos los documentos y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="mobile">mobile<a href="#mobile" class="hash-link" aria-label="Enlace directo al mobile" title="Enlace directo al mobile">​</a></h4>
+</li>
+</ul>
+<p>Móvil del cliente. Este campo es opcional, si no se envía por defecto toma el valor de <code>&quot;&quot;</code>.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="email">email<a href="#email" class="hash-link" aria-label="Enlace directo al email" title="Enlace directo al email">​</a></h4>
+</li>
+</ul>
+<p>Email del cliente. Este campo es obligatorio para todos los documentos que deben ser enviados al cliente y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="address-1">address<a href="#address-1" class="hash-link" aria-label="Enlace directo al address" title="Enlace directo al address">​</a></h4>
+</li>
+</ul>
+<p>Dirección del cliente. Este documento es opcional, si no se envía por defecto toma el valor de <code>&quot;&quot;</code>.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="postal_code">postal_code<a href="#postal_code" class="hash-link" aria-label="Enlace directo al postal_code" title="Enlace directo al postal_code">​</a></h4>
+</li>
+</ul>
+<p>Código postal del cliente. Este campo es opcional, si no se envía por defecto toma el valor de <code>&quot;661002&quot;</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="customer---documento-equivalente-pos">customer -&gt; Documento Equivalente P.O.S.<a href="#customer---documento-equivalente-pos" class="hash-link" aria-label="Enlace directo al customer -&gt; Documento Equivalente P.O.S." title="Enlace directo al customer -&gt; Documento Equivalente P.O.S.">​</a></h3>
+<p>Información del cliente. Este campo es obligatorio solo para los documentos equivalentes P.O.S y debe ser un objeto.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="company_name-2">company_name<a href="#company_name-2" class="hash-link" aria-label="Enlace directo al company_name" title="Enlace directo al company_name">​</a></h4>
+</li>
+</ul>
+<p>Nombre de la empresa/persona natual. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="dni-1">dni<a href="#dni-1" class="hash-link" aria-label="Enlace directo al dni" title="Enlace directo al dni">​</a></h4>
+</li>
+</ul>
+<p>DNI del cliente. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="points">points<a href="#points" class="hash-link" aria-label="Enlace directo al points" title="Enlace directo al points">​</a></h4>
+</li>
+</ul>
+<p>Puntos del cliente. Este campo es opcional, si no se envía por defecto toma el valor de <code>0</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="discrepancy_response">discrepancy_response<a href="#discrepancy_response" class="hash-link" aria-label="Enlace directo al discrepancy_response" title="Enlace directo al discrepancy_response">​</a></h3>
+<p>Respuesta a discrepancias. Este campo es obligatorio solo para las notas de crédito, débito y de ajustes de todos los documentos y debe ser un objeto.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="reference_id">reference_id<a href="#reference_id" class="hash-link" aria-label="Enlace directo al reference_id" title="Enlace directo al reference_id">​</a></h4>
+</li>
+</ul>
+<p>Número del documento de referencia. Este campo es obligatorio solo para las notas de crédito, débito y de ajustes de todos los documentos y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="response_id">response_id<a href="#response_id" class="hash-link" aria-label="Enlace directo al response_id" title="Enlace directo al response_id">​</a></h4>
+</li>
+</ul>
+<p>ID de la respuesta. Este campo es obligatorio solo para las notas de crédito, débito y de ajustes de todos los documentos y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="billing_reference">billing_reference<a href="#billing_reference" class="hash-link" aria-label="Enlace directo al billing_reference" title="Enlace directo al billing_reference">​</a></h3>
+<p>Referencia de facturación. Este campo es obligatorio solo para las notas de crédito, débito y de ajustes de todos los documentos y debe ser un objeto.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="number">number<a href="#number" class="hash-link" aria-label="Enlace directo al number" title="Enlace directo al number">​</a></h4>
+</li>
+</ul>
+<p>Número del documento de referencia. Este campo es obligatorio solo para las notas de crédito, débito y de ajustes de todos los documentos y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="date-1">date<a href="#date-1" class="hash-link" aria-label="Enlace directo al date" title="Enlace directo al date">​</a></h4>
+</li>
+</ul>
+<p>Fecha del documento de referencia. Este campo es obligatorio solo para las notas de crédito, débito y de ajustes de todos los documentos y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="uuid">uuid<a href="#uuid" class="hash-link" aria-label="Enlace directo al uuid" title="Enlace directo al uuid">​</a></h4>
+</li>
+</ul>
+<p>UUID del documento de referencia(<code>CUFE/CUDE</code>). Este campo es obligatorio solo para las notas de crédito, débito y de ajustes de todos los documentos y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="allowance_charges">allowance_charges<a href="#allowance_charges" class="hash-link" aria-label="Enlace directo al allowance_charges" title="Enlace directo al allowance_charges">​</a></h3>
+<p>Cargos y descuentos (Aplicable a facturas y notas). Este campo es opcional y debe ser un arreglo de objetos.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="amount">amount<a href="#amount" class="hash-link" aria-label="Enlace directo al amount" title="Enlace directo al amount">​</a></h4>
+</li>
+</ul>
+<p>Monto. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="base_amount">base_amount<a href="#base_amount" class="hash-link" aria-label="Enlace directo al base_amount" title="Enlace directo al base_amount">​</a></h4>
+</li>
+</ul>
+<p>Monto base. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="charge_indicator">charge_indicator<a href="#charge_indicator" class="hash-link" aria-label="Enlace directo al charge_indicator" title="Enlace directo al charge_indicator">​</a></h4>
+</li>
+</ul>
+<p>Indicador de cargo. Este campo es obligatorio cuando el cargo no es un descuento y debe ser un booleano.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="allowance_charge_reason">allowance_charge_reason<a href="#allowance_charge_reason" class="hash-link" aria-label="Enlace directo al allowance_charge_reason" title="Enlace directo al allowance_charge_reason">​</a></h4>
+</li>
+</ul>
+<p>Motivo del cargo o descuento. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="discount_id">discount_id<a href="#discount_id" class="hash-link" aria-label="Enlace directo al discount_id" title="Enlace directo al discount_id">​</a></h4>
+</li>
+</ul>
+<p>ID del descuento. Este campo es opcional y debe ser un entero.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="legal_monetary_totals">legal_monetary_totals<a href="#legal_monetary_totals" class="hash-link" aria-label="Enlace directo al legal_monetary_totals" title="Enlace directo al legal_monetary_totals">​</a></h3>
+<p>Totales del documento. Este campo es obligatorio para todos los documentos y debe ser un objeto.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="line_extension_amount">line_extension_amount<a href="#line_extension_amount" class="hash-link" aria-label="Enlace directo al line_extension_amount" title="Enlace directo al line_extension_amount">​</a></h4>
+</li>
+</ul>
+<p>Total de líneas antes de iva. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tax_exclusive_amount">tax_exclusive_amount<a href="#tax_exclusive_amount" class="hash-link" aria-label="Enlace directo al tax_exclusive_amount" title="Enlace directo al tax_exclusive_amount">​</a></h4>
+</li>
+</ul>
+<p>Base gravable de líneas que tienen impuesto, si no tiene impuesto se deja en cero. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tax_inclusive_amount">tax_inclusive_amount<a href="#tax_inclusive_amount" class="hash-link" aria-label="Enlace directo al tax_inclusive_amount" title="Enlace directo al tax_inclusive_amount">​</a></h4>
+</li>
+</ul>
+<p>Total de líneas + Impuestos. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="total_charges">total_charges<a href="#total_charges" class="hash-link" aria-label="Enlace directo al total_charges" title="Enlace directo al total_charges">​</a></h4>
+</li>
+</ul>
+<p>Total de cargos. Este campo es opcional y debe ser un entero. Si no se envía por defecto toma el valor de <code>0</code>.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="total_allowance">total_allowance<a href="#total_allowance" class="hash-link" aria-label="Enlace directo al total_allowance" title="Enlace directo al total_allowance">​</a></h4>
+</li>
+</ul>
+<p>Total de descuentos. Este campo es opcional y debe ser un entero. Si no se envía por defecto toma el valor de <code>0</code>.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="payable_amount">payable_amount<a href="#payable_amount" class="hash-link" aria-label="Enlace directo al payable_amount" title="Enlace directo al payable_amount">​</a></h4>
+</li>
+</ul>
+<p>Monto total del documento. Este campo es obligatorio y debe ser un string.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lines">lines<a href="#lines" class="hash-link" aria-label="Enlace directo al lines" title="Enlace directo al lines">​</a></h3>
+<p>Líneas de detalle de cada documento. Este campo es obligatorio para todos los documentos y debe ser un arreglo de objetos.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="invoiced_quantity">invoiced_quantity<a href="#invoiced_quantity" class="hash-link" aria-label="Enlace directo al invoiced_quantity" title="Enlace directo al invoiced_quantity">​</a></h4>
+</li>
+</ul>
+<p>Cantidad facturada. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="unit_measure_id">unit_measure_id<a href="#unit_measure_id" class="hash-link" aria-label="Enlace directo al unit_measure_id" title="Enlace directo al unit_measure_id">​</a></h4>
+</li>
+</ul>
+<p>ID de la unidad de medida. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="line_extension_amount-1">line_extension_amount<a href="#line_extension_amount-1" class="hash-link" aria-label="Enlace directo al line_extension_amount" title="Enlace directo al line_extension_amount">​</a></h4>
+</li>
+</ul>
+<p>Monto de extensión de línea sin impuesto. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="free_of_charge_indicator">free_of_charge_indicator<a href="#free_of_charge_indicator" class="hash-link" aria-label="Enlace directo al free_of_charge_indicator" title="Enlace directo al free_of_charge_indicator">​</a></h4>
+</li>
+</ul>
+<p>Indicador de gratuidad. Este campo es obligatorio y debe ser un booleano.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="description">description<a href="#description" class="hash-link" aria-label="Enlace directo al description" title="Enlace directo al description">​</a></h4>
+</li>
+</ul>
+<p>Descripción del detalle de la línea. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="note">note<a href="#note" class="hash-link" aria-label="Enlace directo al note" title="Enlace directo al note">​</a></h4>
+</li>
+</ul>
+<p>Nota adicional del detalle de la línea. Este campo es opcional y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="code">code<a href="#code" class="hash-link" aria-label="Enlace directo al code" title="Enlace directo al code">​</a></h4>
+</li>
+</ul>
+<p>Código del detalle de la línea. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="type_item_identifications_id">type_item_identifications_id<a href="#type_item_identifications_id" class="hash-link" aria-label="Enlace directo al type_item_identifications_id" title="Enlace directo al type_item_identifications_id">​</a></h4>
+</li>
+</ul>
+<p>ID del tipo de identificación del ítem. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="reference_price_id">reference_price_id<a href="#reference_price_id" class="hash-link" aria-label="Enlace directo al reference_price_id" title="Enlace directo al reference_price_id">​</a></h4>
+</li>
+</ul>
+<p>ID del precio de referencia. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="price_amount">price_amount<a href="#price_amount" class="hash-link" aria-label="Enlace directo al price_amount" title="Enlace directo al price_amount">​</a></h4>
+</li>
+</ul>
+<p>Monto del precio. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="base_quantity">base_quantity<a href="#base_quantity" class="hash-link" aria-label="Enlace directo al base_quantity" title="Enlace directo al base_quantity">​</a></h4>
+</li>
+</ul>
+<p>Cantidad base. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="invoice_period">invoice_period<a href="#invoice_period" class="hash-link" aria-label="Enlace directo al invoice_period" title="Enlace directo al invoice_period">​</a></h4>
+</li>
+</ul>
+<p>Periodo de facturación de la línea del documento soporte. Este campo es obligatorio solo para los documentos soporte y debe ser un objeto.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="start_date">start_date<a href="#start_date" class="hash-link" aria-label="Enlace directo al start_date" title="Enlace directo al start_date">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>Fecha de inicio. Este campo es obligatorio solo para los documentos soporte y debe ser un string.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="description_code">description_code<a href="#description_code" class="hash-link" aria-label="Enlace directo al description_code" title="Enlace directo al description_code">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>Código de descripción. Este campo es obligatorio solo para los documentos soporte y debe ser un entero.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="allowance_charges-1">allowance_charges<a href="#allowance_charges-1" class="hash-link" aria-label="Enlace directo al allowance_charges" title="Enlace directo al allowance_charges">​</a></h4>
+</li>
+</ul>
+<p>Cargos y descuentos en la línea. Este campo es opcional y debe ser un arreglo de objetos.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="amount-1">amount<a href="#amount-1" class="hash-link" aria-label="Enlace directo al amount" title="Enlace directo al amount">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>Monto. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="base_amount-1">base_amount<a href="#base_amount-1" class="hash-link" aria-label="Enlace directo al base_amount" title="Enlace directo al base_amount">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>Monto base. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="charge_indicator-1">charge_indicator<a href="#charge_indicator-1" class="hash-link" aria-label="Enlace directo al charge_indicator" title="Enlace directo al charge_indicator">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>Indicador de cargo. Este campo es obligatorio cuando el cargo no es un descuento y debe ser un booleano.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="allowance_charge_reason-1">allowance_charge_reason<a href="#allowance_charge_reason-1" class="hash-link" aria-label="Enlace directo al allowance_charge_reason" title="Enlace directo al allowance_charge_reason">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>Motivo del cargo o descuento. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="discount_id-1">discount_id<a href="#discount_id-1" class="hash-link" aria-label="Enlace directo al discount_id" title="Enlace directo al discount_id">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>ID del descuento. Este campo es opcional y debe ser un entero.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tax_totals">tax_totals<a href="#tax_totals" class="hash-link" aria-label="Enlace directo al tax_totals" title="Enlace directo al tax_totals">​</a></h4>
+</li>
+</ul>
+<p>Todos los impuestos de la línea. Este campo es obligatorio solo cuanto la línea tiene impuestos y debe ser un arreglo de objetos.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="tax_id">tax_id<a href="#tax_id" class="hash-link" aria-label="Enlace directo al tax_id" title="Enlace directo al tax_id">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>ID del impuesto. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="tax_amount">tax_amount<a href="#tax_amount" class="hash-link" aria-label="Enlace directo al tax_amount" title="Enlace directo al tax_amount">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>Monto del impuesto. Este campo es obligatorio y debe ser un entero.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="taxable_amount">taxable_amount<a href="#taxable_amount" class="hash-link" aria-label="Enlace directo al taxable_amount" title="Enlace directo al taxable_amount">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>Monto imponible. Este campo es obligatorio y debe ser un entero.</p>
+<ul>
+<li>
+<ul>
+<li>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="percent">percent<a href="#percent" class="hash-link" aria-label="Enlace directo al percent" title="Enlace directo al percent">​</a></h5>
+</li>
+</ul>
+</li>
+</ul>
+<p>Porcentaje. Este campo es obligatorio y debe ser un entero.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tax_totals-1">tax_totals<a href="#tax_totals-1" class="hash-link" aria-label="Enlace directo al tax_totals" title="Enlace directo al tax_totals">​</a></h3>
+<p>Suma de todos los impuestos del documento. Este campo es obligatorio solo cuanto el documento tiene impuestos y debe ser un arreglo de objetos.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tax_id-1">tax_id<a href="#tax_id-1" class="hash-link" aria-label="Enlace directo al tax_id" title="Enlace directo al tax_id">​</a></h4>
+</li>
+</ul>
+<p>ID del impuesto. Este campo es obligatorio y debe ser un string.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tax_amount-1">tax_amount<a href="#tax_amount-1" class="hash-link" aria-label="Enlace directo al tax_amount" title="Enlace directo al tax_amount">​</a></h4>
+</li>
+</ul>
+<p>Monto del impuesto. Este campo es obligatorio y debe ser un entero.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="taxable_amount-1">taxable_amount<a href="#taxable_amount-1" class="hash-link" aria-label="Enlace directo al taxable_amount" title="Enlace directo al taxable_amount">​</a></h4>
+</li>
+</ul>
+<p>Monto imponible. Este campo es obligatorio y debe ser un entero.</p>
+<ul>
+<li>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="percent-1">percent<a href="#percent-1" class="hash-link" aria-label="Enlace directo al percent" title="Enlace directo al percent">​</a></h4>
+</li>
+</ul>
+<p>Porcentaje. Este campo es obligatorio y debe ser un entero.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jsons-billing/billing-fields.mdx" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Editar esta página</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Página del documento"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs-matias-api.github.io/docs/category/jsons-facturación"><div class="pagination-nav__sublabel">Anterior</div><div class="pagination-nav__label">JSONs Facturación</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs-matias-api.github.io/docs/jsons-billing/invoice"><div class="pagination-nav__sublabel">Siguiente</div><div class="pagination-nav__label">JSON de una Factura</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#descripción-de-los-campos" class="table-of-contents__link toc-highlight">Descripción de los campos</a></li><li><a href="#uso-de-los-campos" class="table-of-contents__link toc-highlight">Uso de los campos</a><ul><li><a href="#resolution_number" class="table-of-contents__link toc-highlight">resolution_number</a></li><li><a href="#date" class="table-of-contents__link toc-highlight">date</a></li><li><a href="#expiration_date" class="table-of-contents__link toc-highlight">expiration_date</a></li><li><a href="#time" class="table-of-contents__link toc-highlight">time</a></li><li><a href="#notes" class="table-of-contents__link toc-highlight">notes</a></li><li><a href="#document_number" class="table-of-contents__link toc-highlight">document_number</a></li><li><a href="#operation_type_id" class="table-of-contents__link toc-highlight">operation_type_id</a></li><li><a href="#type_document_id" class="table-of-contents__link toc-highlight">type_document_id</a></li><li><a href="#graphic_representation" class="table-of-contents__link toc-highlight">graphic_representation</a></li><li><a href="#send_email" class="table-of-contents__link toc-highlight">send_email</a></li><li><a href="#currency_id" class="table-of-contents__link toc-highlight">currency_id</a></li><li><a href="#payments" class="table-of-contents__link toc-highlight">payments</a></li><li><a href="#payment_exchange_rate" class="table-of-contents__link toc-highlight">payment_exchange_rate</a></li><li><a href="#point_of_sale" class="table-of-contents__link toc-highlight">point_of_sale</a></li><li><a href="#software_manufacturer" class="table-of-contents__link toc-highlight">software_manufacturer</a></li><li><a href="#order_reference" class="table-of-contents__link toc-highlight">order_reference</a></li><li><a href="#customer---factura" class="table-of-contents__link toc-highlight">customer -&gt; Factura</a></li><li><a href="#customer---documento-equivalente-pos" class="table-of-contents__link toc-highlight">customer -&gt; Documento Equivalente P.O.S.</a></li><li><a href="#discrepancy_response" class="table-of-contents__link toc-highlight">discrepancy_response</a></li><li><a href="#billing_reference" class="table-of-contents__link toc-highlight">billing_reference</a></li><li><a href="#allowance_charges" class="table-of-contents__link toc-highlight">allowance_charges</a></li><li><a href="#legal_monetary_totals" class="table-of-contents__link toc-highlight">legal_monetary_totals</a></li><li><a href="#lines" class="table-of-contents__link toc-highlight">lines</a></li><li><a href="#tax_totals-1" class="table-of-contents__link toc-highlight">tax_totals</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs-matias-api.github.io/docs/intro">Integración</a></li></ul></div><div class="col footer__col"><div class="footer__title">Comunidad</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.youtube.com/channel/UCOR7YVBcqQuuGN6-jnPgm0g" target="_blank" rel="noopener noreferrer" class="footer__link-item">YouTube<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Más</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs-matias-api.github.io/blog">Blog</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 LOPEZSOFT SAS, Todos los derechos reservados.</div></div></div></footer></div>
+</body>
+</html>
