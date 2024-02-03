@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapiubl_2_1=self.webpackChunkapiubl_2_1||[]).push([[3411],{7656:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/docs-matias-api.github.io/blog/tags/facebook","allTagsPath":"/docs-matias-api.github.io/blog/tags","count":1,"unlisted":false}')}}]);
