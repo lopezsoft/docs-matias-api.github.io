@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapiubl_2_1=self.webpackChunkapiubl_2_1||[]).push([[924],{6751:a=>{a.exports=JSON.parse('{"label":"docusaurus","permalink":"/docs-matias-api.github.io/blog/tags/docusaurus","allTagsPath":"/docs-matias-api.github.io/blog/tags","count":4,"unlisted":false}')}}]);
