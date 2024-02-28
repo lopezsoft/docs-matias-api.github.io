@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkMATIAS_API=self.webpackChunkMATIAS_API||[]).push([[3958],{4469:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"default"}')}}]);

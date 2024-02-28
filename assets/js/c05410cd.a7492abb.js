@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkMATIAS_API=self.webpackChunkMATIAS_API||[]).push([[4750],{3848:a=>{a.exports=JSON.parse('{"label":"hola","permalink":"/docs-matias-api.github.io/blog/tags/hola","allTagsPath":"/docs-matias-api.github.io/blog/tags","count":1,"unlisted":false}')}}]);

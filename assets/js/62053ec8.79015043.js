@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkMATIAS_API=self.webpackChunkMATIAS_API||[]).push([[1924],{6751:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/docs-matias-api.github.io/blog/tags/docusaurus","allTagsPath":"/docs-matias-api.github.io/blog/tags","count":4,"unlisted":false}')}}]);
